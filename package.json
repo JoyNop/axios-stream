@@ -1,0 +1,29 @@
+{
+  "name": "axios-stream",
+  "version": "1.0.0",
+  "description": "Download data stream files via axios",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoyNop/axios-stream.git"
+  },
+  "keywords": [
+    "axios",
+    "stream",
+    "file"
+  ],
+  "author": "JoyNop",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/JoyNop/axios-stream/issues"
+  },
+  "homepage": "https://github.com/JoyNop/axios-stream#readme",
+  "dependencies": {
+    "@types/axios": "^0.14.0",
+    "axios": "^0.19.2",
+    "prettier": "^2.0.5"
+  }
+}
