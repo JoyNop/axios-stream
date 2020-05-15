@@ -2,6 +2,7 @@
 
 Download stream files via axios
 
+![Logo](./docs/logo.png)
 
 
 >**This library is only suitable for WEB projects that use [axios](https://www.npmjs.com/package/axios) as the HTTP request library**
