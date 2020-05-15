@@ -1,11 +1,8 @@
-
-
 /**
  * 
  * @param reqUrl 
  * @param downFileName 
  */
-
 
 export interface AxiosStreamStatic {
     download(reqUrl: string, downFileName: string): void;

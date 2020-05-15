@@ -1,5 +1,3 @@
-
-
 'use strict'
 const axios = require('axios');
 /**
@@ -9,8 +7,6 @@ const axios = require('axios');
  * @param {string} downFileName  请求的下载名称，必须指定文件名和扩展名
  * 
  */
-
-
 
 const download = async (reqUrl, downFileName) => {
   try {
@@ -32,10 +28,6 @@ const download = async (reqUrl, downFileName) => {
     throw error
   }
 };
-
-
-
-
 
 export default {
   download
