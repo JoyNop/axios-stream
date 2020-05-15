@@ -12,7 +12,6 @@ const axios = require('axios');
 
 
   export const streamDownload = async (reqUrl, downFileName) => {
-    let status=false
     try {
       const res = await axios.get(reqUrl, {
         responseType: "blob",
@@ -28,13 +27,9 @@ const axios = require('axios');
       document.body.appendChild(hideLink);
       hideLink.click();
       document.body.removeChild(hideLink);
-      status=true
     } catch (error) {
       throw error
-    }finally{
-      return status
     }
-
   };
 
 
