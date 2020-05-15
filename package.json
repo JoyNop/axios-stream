@@ -1,6 +1,6 @@
 {
   "name": "axios-stream",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Download data stream files via axios",
   "main": "index.js",
   "scripts": {
@@ -20,10 +20,6 @@
   "homepage": "https://github.com/JoyNop/axios-stream#readme",
   "dependencies": {
     "@types/axios": "^0.14.0",
-    "axios": "^0.19.2",
-    "dts-gen": "^0.6.0",
-    "dtsmake": "^0.0.10",
-    "prettier": "^2.0.5",
-    "yargs": "^15.3.1"
+    "axios": "^0.19.2"
   }
 }
