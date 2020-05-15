@@ -1,11 +1,6 @@
-/**
- * 
- * @param reqUrl 
- * @param downFileName 
- */
-
+import { AxiosRequestConfig } from "axios";
 export interface AxiosStreamStatic {
-    download(reqUrl: string, downFileName: string): void;
+    download(downFileName: string, extensionName: string, axiosConfig: AxiosRequestConfig): void;
     // Cancel: CancelStatic;
     // CancelToken: CancelTokenStatic;
     // isCancel(value: any): boolean;

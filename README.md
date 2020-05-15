@@ -2,9 +2,17 @@
 
 Download stream files via axios
 
->**This library is only suitable for WEB projects that use [axios]("https://www.npmjs.com/package/axios") as the HTTP request library**
 
->**Please install [axios]("https://www.npmjs.com/package/axios") first, and then use [axios-stream]("https://www.npmjs.com/package/axios-stream")**
+
+>**This library is only suitable for WEB projects that use [axios](https://www.npmjs.com/package/axios) as the HTTP request library**
+
+>**Please install [axios](https://www.npmjs.com/package/axios) first, and then use [axios-stream](https://www.npmjs.com/package/axios-stream)**
+
+
+## The problems it solves:
+
+Using Axios and Blob objects to achieve file stream download
+
 
 ## How to use:
 
@@ -20,9 +28,14 @@ Download stream files via axios
 
 ```typescript
 
-const reqUrl='http.get.url'
-const fileName='yourFileName.txt'
-AxiosStream.download(reqUrl,fileName);
+const downFileName='today'
+const extensionName='xlsx'
+const axiosConfig={
+  method: 'get',
+  url: '/user/12345',
+}
+ 
+AxiosStream.download(downFileName, extensionName, axiosConfig);
 ```
 
 **Enter the path and file name you want to download**

@@ -2,17 +2,21 @@
 const axios = require('axios');
 /**
  *
- * @description 数据流文件下载
- * @param {string} reqUrl 请求的API
+ * @description 数据流文件下载 
  * @param {string} downFileName  请求的下载名称，必须指定文件名和扩展名
+ * @param {AxiosRequestConfig} axiosConfig
  * 
  */
 
-const download = async (reqUrl, downFileName) => {
+const download = async (downFileName, extensionName, axiosConfig) => {
   try {
-    const res = await axios.get(reqUrl, {
-      responseType: "blob",
-    });
+    if (axiosConfig.hasOwnProperty('responseType')) {
+      axiosConfig.responseType = "blob"
+    } else {
+      Object.assign(axiosConfig, { responseType: "blob" })
+    }
+    const res = await axios(axiosConfig)
+
     const blob = new Blob([res.data], {
       type: "application/octet-stream",
     });
@@ -20,7 +24,7 @@ const download = async (reqUrl, downFileName) => {
     hideLink.style.display = "none";
     const objectUrl = window.URL.createObjectURL(blob);
     hideLink.href = objectUrl;
-    hideLink.download = downFileName;
+    hideLink.download = `${downFileName}.${extensionName}`;
     document.body.appendChild(hideLink);
     hideLink.click();
     document.body.removeChild(hideLink);
