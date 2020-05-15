@@ -6,7 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": "https://github.com/JoyNop/axios-stream.git",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:/JoyNop/axios-stream.git"
+  },
   "keywords": [
     "axios",
     "stream",
