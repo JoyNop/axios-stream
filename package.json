@@ -24,6 +24,9 @@
   "dependencies": {
     "@types/axios": "^0.14.0",
     "axios": "^0.19.2",
-    "prettier": "^2.0.5"
+    "dts-gen": "^0.6.0",
+    "dtsmake": "^0.0.10",
+    "prettier": "^2.0.5",
+    "yargs": "^15.3.1"
   }
 }
