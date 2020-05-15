@@ -12,6 +12,6 @@
 
 
 
-declare const streamDownload: any;
+declare const streamDownload:(reqUrl:string,downloadFileName:string)=>void;
 
 export default streamDownload;
