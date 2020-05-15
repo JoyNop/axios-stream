@@ -8,10 +8,10 @@
  * @param reqUrl 
  * @param downFileName 
  */
-// declare function streamDownload(reqUrl : string, downFileName : string): void;
+declare function streamDownload(reqUrl : string, downFileName : string): void;
 
 
 
-declare const streamDownload: (reqUrl: string, downloadFileName: string) => void;
+// declare const streamDownload: (reqUrl: string, downloadFileName: string) => void;
 
 export default streamDownload;
