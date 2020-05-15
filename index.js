@@ -1,5 +1,6 @@
 
 
+'use strict'
 const axios = require('axios');
 /**
  *
@@ -11,28 +12,31 @@ const axios = require('axios');
 
 
 
-  export const streamDownload = async (reqUrl, downFileName) => {
-    try {
-      const res = await axios.get(reqUrl, {
-        responseType: "blob",
-      });
-      const blob = new Blob([res.data], {
-        type: "application/octet-stream",
-      });
-      const hideLink = document.createElement("a");
-      hideLink.style.display = "none";
-      const objectUrl = window.URL.createObjectURL(blob);
-      hideLink.href = objectUrl;
-      hideLink.download = downFileName;
-      document.body.appendChild(hideLink);
-      hideLink.click();
-      document.body.removeChild(hideLink);
-    } catch (error) {
-      throw error
-    }
-  };
+const download = async (reqUrl, downFileName) => {
+  try {
+    const res = await axios.get(reqUrl, {
+      responseType: "blob",
+    });
+    const blob = new Blob([res.data], {
+      type: "application/octet-stream",
+    });
+    const hideLink = document.createElement("a");
+    hideLink.style.display = "none";
+    const objectUrl = window.URL.createObjectURL(blob);
+    hideLink.href = objectUrl;
+    hideLink.download = downFileName;
+    document.body.appendChild(hideLink);
+    hideLink.click();
+    document.body.removeChild(hideLink);
+  } catch (error) {
+    throw error
+  }
+};
 
 
-module.exports=streamDownload
 
 
+
+export default {
+  download
+}
