@@ -30,3 +30,7 @@ AxiosStream.download(reqUrl,fileName);
 **Note that the file name must include the extension**
 
 
+#### Thanks
+>This method originated from the Internet and was inspired by WJH
+
+
