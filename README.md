@@ -2,7 +2,7 @@
 
 Download stream files via axios
 
-![Logo](https://github.com/JoyNop/axios-stream/blob/master/docs/logo.png)
+![Logo](https://raw.githubusercontent.com/JoyNop/axios-stream/master/docs/logo.png)
 
 
 >**This library is only suitable for WEB projects that use [axios](https://www.npmjs.com/package/axios) as the HTTP request library**
