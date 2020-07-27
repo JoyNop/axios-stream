@@ -45,6 +45,6 @@ AxiosStream.download(downFileName, extensionName, axiosConfig);
 
 
 #### Thanks
->This method originated from the Internet and was inspired by WJH
+>This method originated from the Internet and was inspired by [chennvwang](https://github.com/chennvwang)
 
 
