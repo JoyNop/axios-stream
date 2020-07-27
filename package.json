@@ -1,6 +1,6 @@
 {
   "name": "axios-stream",
-  "version": "1.0.14",
+  "version": "1.0.16",
   "description": "Download data stream files via axios",
   "main": "index.js",
   "scripts": {
