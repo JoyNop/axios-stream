@@ -8,6 +8,16 @@ const axios = require('axios');
  * 
  */
 
+
+
+const blobTypeTemplate = {
+  bin: "application/octet-stream",
+  xlsx: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+  docx: "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+  gif:"image/gif"
+
+}
+
 const download = async (downFileName, extensionName, axiosConfig) => {
   try {
     if (axiosConfig.hasOwnProperty('responseType')) {
@@ -17,8 +27,13 @@ const download = async (downFileName, extensionName, axiosConfig) => {
     }
     const res = await axios(axiosConfig)
 
+    const blobType = extensionName.toLowerCase()
+    let type = { type: blobTypeTemplate.bin }
+    if (blobType && blobTypeTemplate.hasOwnProperty(blobType)) {
+      type = { type: blobTypeTemplate[blobType] }
+    }
     const blob = new Blob([res.data], {
-      type: "application/octet-stream",
+      type
     });
     const hideLink = document.createElement("a");
     hideLink.style.display = "none";
