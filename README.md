@@ -41,7 +41,7 @@ AxiosStream.download(downFileName, extensionName, axiosConfig);
 
 **Enter the path and file name you want to download**
 
-**Note that the file name must include the extension**
+> the file name must include the extension**
 
 
 #### Thanks
